@@ -1,0 +1,11 @@
+<section class="people">
+  <h2 class="people__title">Meus Fakes</h2>
+  <ul class="people__list" *ngIf="people.length > 0">
+    <li *ngFor="let person of people" [class.completed]="person.complete">
+      <button class="people__button" (click)="getPersonByName(person.name)">{{person.name}}</button>
+    </li>
+  </ul>
+  <app-modal *ngIf="selectedPerson" [person]="selectedPerson" [show]="true" (clearPerson)="clearPerson($event)">
+  </app-modal>
+  <p *ngIf="people.length === 0">Não há ninguém cadastrado ainda =(</p>
+</section>

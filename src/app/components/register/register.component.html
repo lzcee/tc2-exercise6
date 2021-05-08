@@ -1,0 +1,19 @@
+<section class="register">
+  <h2 class="register__title">Cadastrar</h2>
+  <form class="register__form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <label>
+      Nome
+      <input required type="text" formControlName="name">
+    </label>
+    <label>
+      Idade
+      <input required type="number" formControlName="age">
+    </label>
+    <label>
+      Imagem
+      <input type="text" formControlName="image">
+    </label>
+    <input type="submit" value="Cadastrar">
+  </form>
+  <p *ngIf="registerFormMessage" class="register__message">{{ registerFormMessage }}</p>
+</section>

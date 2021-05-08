@@ -1,0 +1,32 @@
+.header {
+  text-align: center;
+  background-color: #696969;
+  padding: 20px 0;
+  margin-bottom: 42px;
+
+  &__title {
+    color: #ffffff;
+    margin: 0;
+  }
+}
+
+.footer {
+  background-color: #696969;
+  margin-top: 42px;
+  padding: 6px 0;
+  text-align: center;
+
+  &__description {
+    margin: 0;
+    color: #ffffff;
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    column-gap: 90px;
+    min-height: calc(100vh - 190px);
+  }
+}
