@@ -30,7 +30,10 @@ export class RegisterComponent {
         }
         this.databaseService.addPerson(this.person);
         this.registerForm.reset();
-        this.registerFormMessage = '';
+        this.registerFormMessage = 'Pessoa cadastrada com sucesso!';
+        setTimeout(() => {
+          this.registerFormMessage = '';
+        }, 1500);
       } else {
         this.registerFormMessage = 'Pessoa já cadastrada.';
       }
